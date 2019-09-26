@@ -1,0 +1,44 @@
+{
+    "name": "cliveportman/commerce-email-scheduler",
+    "description": "Email scheduler for Craft Commerce",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "commerce email scheduler"
+    ],
+    "support": {
+        "docs": "https://github.com/cliveportman/commerce-email-scheduler/blob/master/README.md",
+        "issues": "https://github.com/cliveportman/commerce-email-scheduler/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Clive Portman",
+            "homepage": "https://clive.theportman.co"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "cliveportman\\commerceemailscheduler\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Commerce email scheduler",
+        "handle": "commerce-email-scheduler",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/cliveportman/commerce-email-scheduler/master/CHANGELOG.md",
+        "components": {
+            "send": "cliveportman\\commerceemailscheduler\\services\\Send",
+            "check": "cliveportman\\commerceemailscheduler\\services\\Check"
+        },
+        "class": "cliveportman\\commerceemailscheduler\\CommerceEmailScheduler"
+    }
+}

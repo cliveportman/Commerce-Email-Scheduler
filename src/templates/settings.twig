@@ -1,0 +1,26 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Commerce email scheduler plugin for Craft CMS 3.x
+ *
+ * Commerce email scheduler Settings.twig
+ *
+ * @author    Clive Portman
+ * @copyright Copyright (c) 2019 Clive Portman
+ * @link      https://clive.theportman.co
+ * @package   CommerceEmailScheduler
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("cliveportman\\commerceemailscheduler\\assetbundles\\commerceemailscheduler\\CommerceEmailSchedulerAsset") %}
+
+{{ forms.textField({
+    label: 'Some Field',
+    instructions: 'Enter some setting here.',
+    id: 'someAttribute',
+    name: 'someAttribute',
+    value: settings['someAttribute']})
+}}
