@@ -122,6 +122,7 @@ class Check extends Component
 
         $orders = \craft\commerce\elements\Order::find()
             ->hasPurchasables($purchasables)
+            ->isCompleted()
             ->all();
 
         if (!$orders) {
